@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "UpgradeabilityStorage",
+  "sourceName": "contracts/inherit/UpgradeabilityStorage.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122048a92a660be37e8e65e876e3acac4cc191f53895a5f767c3395397b8f426ae5864736f6c63430008000033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122048a92a660be37e8e65e876e3acac4cc191f53895a5f767c3395397b8f426ae5864736f6c63430008000033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
