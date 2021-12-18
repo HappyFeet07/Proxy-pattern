@@ -2,7 +2,6 @@
 pragma solidity ^0.8.0;
 
 import './IRegistry.sol';
-import './IUpgradeable.sol';
 import './Upgradeable.sol';
 import './UpgradeabilityProxy.sol';
 
