@@ -3,8 +3,8 @@ pragma solidity 0.8.0;
 
 import '../Upgradeable.sol';
 
-contract LogicV2 is Upgradeable {
-    
+contract InheritLogicV1 is Upgradeable {
+
     address public importantDataA;
     uint256 public importantDataB;
     bytes32 public importantDataC;
@@ -26,12 +26,6 @@ contract LogicV2 is Upgradeable {
     function setSlot(uint256 slot, uint256 num) external {
         assembly {
             sstore(slot, num)
-        }
-    }
-
-    function setSlot(uint256 slot, address newAddr) external {
-        assembly {
-            sstore(slot, newAddr)
         }
     }
 }

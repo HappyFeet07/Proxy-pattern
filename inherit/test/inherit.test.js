@@ -13,8 +13,8 @@ describe('inherit',() => {
     ] = await ethers.getSigners()
 
     this.Registry = await ethers.getContractFactory('Registry')
-    this.LogicV1 = await ethers.getContractFactory('LogicV1')
-    this.LogicV2 = await ethers.getContractFactory('LogicV2')
+    this.LogicV1 = await ethers.getContractFactory('InheritLogicV1')
+    this.LogicV2 = await ethers.getContractFactory('InheritLogicV2')
     this.LogicMock = await ethers.getContractFactory('LogicMock')
     this.UpProxy = await ethers.getContractFactory('UpgradeabilityProxy')
   })
