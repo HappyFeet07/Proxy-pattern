@@ -30,7 +30,6 @@ describe('inherit',() => {
     await this.logicV1.deployed()
     await this.logicMock.deployed()
     await this.registry.deployed()
-
     const registry = this.registry
     await registry.addVersion("Version1", this.logicV1.address)
     await registry.addVersion("Version2", this.logicV2.address)

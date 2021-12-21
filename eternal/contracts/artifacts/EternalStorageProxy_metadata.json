@@ -1,0 +1,262 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "ProxyOwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "version",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "implementation",
+						"type": "address"
+					}
+				],
+				"name": "Upgraded",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "proxyOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferProxyOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "version_",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "implementation_",
+						"type": "address"
+					}
+				],
+				"name": "upgradeTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "version_",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "implementation_",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "upgradeToAndCall",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "upgradeabilityOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"implementation()": {
+					"details": "Fallback function allowing to perform a delegatecall to the given implementation. This function will return whatever the implementation call returns"
+				},
+				"upgradeabilityOwner()": {
+					"details": "Tells the address of the owner",
+					"returns": {
+						"_0": "the address of the owner"
+					}
+				},
+				"version()": {
+					"details": "Tells the version name of the current implementation",
+					"returns": {
+						"_0": "string representing the name of the current version"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EternalStorageProxy.sol": "EternalStorageProxy"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EternalStorage.sol": {
+			"keccak256": "0x2aac79f8b7bf72c5bc850ceb7ee53661dbebdc63d47ef611bf709cbd08e6fa08",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://c36c8e80fc983152052117a828e7e3525a7585ee1f438a0cb8d654b0d300ed02",
+				"dweb:/ipfs/QmdrF8ix2Vfj7brW6A1HqdzUY9mGJuoHK3cswV2wapgG6v"
+			]
+		},
+		"contracts/EternalStorageProxy.sol": {
+			"keccak256": "0xa4cadbfa5aee361c8fd36d37c402bd472e20301d8151292cd5d29694db8bf172",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://2329895be321422fddde36950f2188ab7bd2f78c49a72f6a98156ca2029f61c4",
+				"dweb:/ipfs/QmYAbtU9YCf1cA4D9KBRQmheMAh7ywWUfsZYAeBuSFNowV"
+			]
+		},
+		"contracts/OwnedUpgradeabilityProxy.sol": {
+			"keccak256": "0xaef74a4b2b5ab13f227eb2c70b1b13a1259c669d509cecedfddbeac4e4ba83a5",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://fc6600e5d2171f0fdf6626df732efb6aba0e5e8ab2296bcb374afedfb70098b5",
+				"dweb:/ipfs/QmVyBedeuoEFfR88UyJ31K4xy4wDRavFQgzcBzd2g6UwUz"
+			]
+		},
+		"contracts/Proxy.sol": {
+			"keccak256": "0x2cf161e1f43218180e20747fb35b1d70b6c85a712e71b4f237fdf2523f9b0247",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://d926c2ade9306007c43eb1d70996667e81e27b7f22e528af1a29f23f53a60bc4",
+				"dweb:/ipfs/QmcsCKJaA5A1D4cnFcTq3xvEyeDyCojaPqaJK4RsK29TzR"
+			]
+		},
+		"contracts/UpgradeabilityOwnerStorage.sol": {
+			"keccak256": "0x9bbd5b5f0870c1c8fd013840ad3a5ae22db969d94aaa89b1f13fe2aefa811443",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://c0d6c8c7d9d7d712c4e0967a9cda4481be9c8e50309dc15766de4e900a97440a",
+				"dweb:/ipfs/QmQxzUE5D4fmyKg2xVpWWL13eoCsc2XyqX2ukrKQ3apkpr"
+			]
+		},
+		"contracts/UpgradeabilityProxy.sol": {
+			"keccak256": "0x64c43910bf906e621ad42bd5369d8babb80a48a0dc4dc681e81cd84c7431f9e7",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://0f646dbc37b56548dba123523fea5ba57edac45965bad3387014389736efe807",
+				"dweb:/ipfs/QmZ2rsWCpBVek9U5oYYGyGwKGQoLSgmJdAQZxhUYRSMpdc"
+			]
+		},
+		"contracts/UpgradeabilityStorage.sol": {
+			"keccak256": "0xffbfb925c308ad089e65b72e46bc4b39bcf20d7aa4f179bcdbd77996e966f7d6",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://046d9e40ae12246cd5b07ff4412cc51307491345fe890c25f8dbdaf6b76ee4b9",
+				"dweb:/ipfs/QmPh4Tw9DxrkZXEL7jktAHLB8UZNa6vzqC8Ri5Gzuwt9UA"
+			]
+		}
+	},
+	"version": 1
+}
