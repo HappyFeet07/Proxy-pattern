@@ -55,7 +55,7 @@ describe('inherit',() => {
       expect(correctAddress3).to.eql(this.logicMock.address);
     })
 
-    it("Proxy should be correctly initiated", async () => {
+    it("Proxy should be initiated correctly", async () => {
       const addressA = await this.proxy.importantDataA();
       expect(addressA).to.eql(this.registry.address);
     })
