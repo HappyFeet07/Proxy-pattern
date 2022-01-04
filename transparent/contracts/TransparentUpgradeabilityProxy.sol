@@ -13,7 +13,7 @@ contract TransparentUpgradeabilityProxy is UpgradeabilityProxy{
         _setAdmin(msg.sender);
     }
 
-    modifier isAdmin() {
+    modifier ifAdmin() {
         if (msg.sender == getAdmin()){
             _;
         } else {
@@ -39,17 +39,17 @@ contract TransparentUpgradeabilityProxy is UpgradeabilityProxy{
         }
     }
 
-    function upgradeTo(address newImpl) external isAdmin {
+    function upgradeTo(address newImpl) external ifAdmin {
         _upgradeTo(newImpl);
     }
 
-    function upgradeToCall(address newImpl, bytes memory data) external payable isAdmin {
+    function upgradeToCall(address newImpl, bytes memory data) external payable ifAdmin {
         _upgradeTo(newImpl);
         (bool success, ) = address(this).call{value: msg.value}(data);
         require(success , "upgradeToCall Failed");
     }
 
-    function changeProxyAdmin(address newAdmin) external isAdmin {
+    function changeProxyAdmin(address newAdmin) external ifAdmin {
         _setAdmin(newAdmin);
         TransferProxyAdmin(msg.sender, newAdmin);
     }
